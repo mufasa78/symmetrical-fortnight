@@ -51,12 +51,12 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Python Development</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Web Applications</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Code Review</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">1-on-1 Mentoring</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Academic Projects</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Deployment & DevOps</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Python Development</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Web Applications</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Code Review</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">1-on-1 Mentoring</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Academic Projects</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Deployment & DevOps</a></li>
             </ul>
           </div>
         </div>
