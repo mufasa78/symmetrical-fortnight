@@ -1,10 +1,33 @@
+import 'dotenv/config';
 import express, { type Request, Response, NextFunction } from "express";
+import compression from 'compression';
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { initStorage } from "./storage";
 
 const app = express();
+// Add compression middleware
+app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Add security headers
+app.use((req, res, next) => {
+  // Add cache control for static assets
+  if (req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000'); // 1 year
+  } else {
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+  }
+
+  // Security headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+  next();
+});
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -37,6 +60,10 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Initialize storage (database or in-memory)
+  await initStorage();
+
+  // Register routes
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
@@ -62,8 +89,7 @@ app.use((req, res, next) => {
   const port = 5000;
   server.listen({
     port,
-    host: "0.0.0.0",
-    reusePort: true,
+    host: "127.0.0.1",
   }, () => {
     log(`serving on port ${port}`);
   });

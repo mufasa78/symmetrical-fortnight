@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { Code } from 'lucide-react';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,21 +24,19 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-primary text-3xl">
-                <Code />
-              </span>
+              <img src="/codementorpro logo.png" alt="CodeMentorPro Logo" className="h-8" />
               <span className="font-bold text-xl">
                 CodeMentor<span className="text-primary">Pro</span>
               </span>
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link, index) => (
-              <a 
-                key={index} 
-                href={link.href} 
+              <a
+                key={index}
+                href={link.href}
                 className="text-gray-700 hover:text-primary font-medium transition-colors"
               >
                 {link.label}
@@ -51,10 +48,10 @@ const Navbar = () => {
               </Button>
             </a>
           </nav>
-          
+
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden flex items-center">
-            <button 
+            <button
               onClick={toggleMobileMenu}
               className="text-gray-700 hover:text-primary focus:outline-none"
             >
@@ -65,23 +62,23 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 shadow-sm">
           <div className="container mx-auto px-4 py-4 space-y-3">
             {navLinks.map((link, index) => (
-              <a 
-                key={index} 
-                href={link.href} 
+              <a
+                key={index}
+                href={link.href}
                 className="block text-gray-700 hover:text-primary font-medium transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="block text-center mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >

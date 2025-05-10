@@ -2,17 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     <title>CodeMentorPro | Expert Python & Web Development Assistance for Students</title>
     <meta name="description" content="Professional assistance for students building Python and web application projects. Get expert help with coding, project development, and mentoring." />
     <meta name="keywords" content="Python development, web applications, student projects, programming help, code review, academic projects" />
-    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/codementorpro favicon.ico" />
+    <link rel="apple-touch-icon" href="/codementorpro logo.png" />
+
+    <!-- Theme Color -->
     <meta name="theme-color" content="#4f46e5" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CodeMentorPro | Expert Python & Web Development Assistance" />
+    <meta property="og:description" content="Professional assistance for students building Python and web application projects." />
+    <meta property="og:image" content="/codementorpro logo.png" />
+    <meta property="og:url" content="https://codementorpro.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" /></noscript>
+
+    <!-- Font Awesome with optimized loading -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "CodeMentorPro",
+        "description": "Professional assistance for students building Python and web application projects.",
+        "url": "https://codementorpro.com",
+        "logo": "https://codementorpro.com/codementorpro logo.png",
+        "sameAs": [
+          "https://discord.gg/uxeNjsdZ",
+          "https://github.com/Mufasa78",
+          "https://instagram.com/helpwithmufasa",
+          "https://x.com/Mufasa746",
+          "https://reddit.com/r/DevBridge"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "offers": {
+          "@type": "Offer",
+          "description": "Python and Web Development Project Assistance"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+    <!-- Development banner script - only loaded in development -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" async></script>
   </body>
 </html>

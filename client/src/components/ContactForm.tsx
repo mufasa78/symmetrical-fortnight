@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { 
-  Form, 
-  FormField, 
-  FormItem, 
-  FormLabel, 
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
   FormControl,
   FormMessage
 } from '@/components/ui/form';
@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
-import { 
+import {
   Select,
   SelectContent,
   SelectItem,
@@ -101,7 +101,7 @@ const ContactForm = () => {
             <p className="text-gray-600 mb-8">
               Ready to turn your project ideas into reality? Fill out the form below, and we'll get back to you within 24 hours to discuss your needs.
             </p>
-            
+
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
                 <div className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center mr-4">
@@ -109,24 +109,24 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email Us</h3>
-                  <a href="mailto:contact@codementorpro.com" className="text-primary-600 hover:text-primary-700">
-                    contact@codementorpro.com
+                  <a href="mailto:helpwithmufasa@proton.me" className="text-primary-600 hover:text-primary-700">
+                    helpwithmufasa@proton.me
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center mr-4">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
                   <h3 className="font-semibold">Call Us</h3>
-                  <a href="tel:+1234567890" className="text-primary-600 hover:text-primary-700">
-                    (123) 456-7890
+                  <a href="tel:+254716830746" className="text-primary-600 hover:text-primary-700">
+                    (254) 716-830746
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center mr-4">
                   <MapPin className="h-5 w-5" />
@@ -138,20 +138,59 @@ const ContactForm = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex space-x-4">
-              {['twitter', 'linkedin', 'github', 'discord'].map((platform) => (
-                <a 
-                  key={platform}
-                  href="#" 
-                  className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-200 transition-colors"
-                >
-                  <i className={`fab fa-${platform}${platform === 'linkedin' ? '-in' : ''}`}></i>
-                </a>
-              ))}
+              <a
+                href="https://x.com/Mufasa746"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-200 transition-colors"
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/stanley-gathekia-"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-200 transition-colors"
+              >
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/Mufasa78"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-200 transition-colors"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+              <a
+                href="https://instagram.com/helpwithmufasa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-200 transition-colors"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://discord.gg/uxeNjsdZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-200 transition-colors"
+              >
+                <i className="fab fa-discord"></i>
+              </a>
+              <a
+                href="https://reddit.com/r/DevBridge"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center hover:bg-primary-200 transition-colors"
+              >
+                <i className="fab fa-reddit"></i>
+              </a>
             </div>
           </div>
-          
+
           <div className="bg-gray-50 rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -183,7 +222,7 @@ const ContactForm = () => {
                     )}
                   />
                 </div>
-                
+
                 <FormField
                   control={form.control}
                   name="subject"
@@ -197,7 +236,7 @@ const ContactForm = () => {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="service"
@@ -225,7 +264,7 @@ const ContactForm = () => {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="message"
@@ -233,17 +272,17 @@ const ContactForm = () => {
                     <FormItem>
                       <FormLabel>Project Details</FormLabel>
                       <FormControl>
-                        <Textarea 
+                        <Textarea
                           placeholder="Please provide details about your project, requirements, and any deadlines."
                           className="min-h-[120px]"
-                          {...field} 
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="consent"
@@ -264,25 +303,25 @@ const ContactForm = () => {
                     </FormItem>
                   )}
                 />
-                
-                <Button 
-                  type="submit" 
+
+                <Button
+                  type="submit"
                   className="w-full bg-primary hover:bg-primary/90"
                   disabled={contactMutation.isPending}
                 >
                   <span>Send Message</span>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    className="h-4 w-4 ml-2" 
-                    fill="none" 
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 ml-2"
+                    fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" 
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
                     />
                   </svg>
                 </Button>

@@ -21,7 +21,7 @@ interface PricingPlanProps {
 const pricingPlans: PricingPlanProps[] = [
   {
     title: "Basic Support",
-    price: "$49",
+    price: "Contact Dev",
     unit: "/ hour",
     description: "Perfect for smaller projects and targeted assistance",
     features: [
@@ -36,7 +36,7 @@ const pricingPlans: PricingPlanProps[] = [
   },
   {
     title: "Standard Package",
-    price: "$299",
+    price: "Contact Dev",
     unit: "/ project",
     description: "Comprehensive support for medium-sized projects",
     features: [
@@ -52,7 +52,7 @@ const pricingPlans: PricingPlanProps[] = [
   },
   {
     title: "Premium Solution",
-    price: "$799",
+    price: "Contact Dev",
     unit: "/ project",
     description: "End-to-end support for complex projects",
     features: [

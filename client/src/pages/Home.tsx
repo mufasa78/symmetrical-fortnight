@@ -12,39 +12,8 @@ import ContactForm from '@/components/ContactForm';
 import Cta from '@/components/Cta';
 import Footer from '@/components/Footer';
 
-// Add Font Awesome for icons
-const addFontAwesome = () => {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-  document.head.appendChild(link);
-};
-
-// Add Google Fonts
-const addGoogleFonts = () => {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap';
-  document.head.appendChild(link);
-};
-
-// Add meta tags
-const addMetaTags = () => {
-  const meta = document.createElement('meta');
-  meta.name = 'description';
-  meta.content = 'Expert assistance for students building Python and web application projects. Get professional guidance, code reviews, and project support.';
-  document.head.appendChild(meta);
-
-  document.title = 'CodeMentor Pro | Python & Web Development Project Assistance';
-};
-
 const Home = () => {
-  // Set up the document when the component mounts
-  useEffect(() => {
-    addFontAwesome();
-    addGoogleFonts();
-    addMetaTags();
-  }, []);
+  // We've moved all resource loading to index.html for better performance
 
   // Handle smooth scrolling for anchor links
   useEffect(() => {
